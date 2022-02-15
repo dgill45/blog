@@ -5,9 +5,10 @@ Our blog has <%= Article.public_count %> articles and counting!
 <ul>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
-    <li>
+      <li>
         <%= link_to article.title, article %>
-    </li>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 
